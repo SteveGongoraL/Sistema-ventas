@@ -63,6 +63,7 @@
             btnRealizarCompra.TabIndex = 3;
             btnRealizarCompra.Text = "Registrar";
             btnRealizarCompra.UseVisualStyleBackColor = false;
+            btnRealizarCompra.Click += btnRealizarCompra_Click;
             // 
             // linkLblCerrarSesion
             // 
@@ -75,6 +76,7 @@
             linkLblCerrarSesion.TabStop = true;
             linkLblCerrarSesion.Text = "Cerrar Sesión";
             linkLblCerrarSesion.VisitedLinkColor = Color.Crimson;
+            linkLblCerrarSesion.LinkClicked += linkLblCerrarSesion_LinkClicked;
             // 
             // linkLblMenu
             // 
@@ -87,6 +89,7 @@
             linkLblMenu.TabStop = true;
             linkLblMenu.Text = "Menu";
             linkLblMenu.VisitedLinkColor = Color.Crimson;
+            linkLblMenu.LinkClicked += linkLblMenu_LinkClicked;
             // 
             // label3
             // 

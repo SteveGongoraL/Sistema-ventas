@@ -272,7 +272,7 @@
             linkLabel2.Margin = new Padding(4, 0, 4, 0);
             linkLabel2.Name = "linkLabel2";
             linkLabel2.Size = new Size(34, 15);
-            linkLabel2.TabIndex = 91;
+            linkLabel2.TabIndex = 6;
             linkLabel2.TabStop = true;
             linkLabel2.Text = "Atras";
             linkLabel2.VisitedLinkColor = Color.Crimson;
@@ -297,7 +297,7 @@
             linkLabel1.Margin = new Padding(4, 0, 4, 0);
             linkLabel1.Name = "linkLabel1";
             linkLabel1.Size = new Size(76, 15);
-            linkLabel1.TabIndex = 89;
+            linkLabel1.TabIndex = 5;
             linkLabel1.TabStop = true;
             linkLabel1.Text = "Cerrar Sesión";
             linkLabel1.VisitedLinkColor = Color.Crimson;

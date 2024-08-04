@@ -35,7 +35,7 @@
             label2 = new Label();
             label3 = new Label();
             txtContrasena = new TextBox();
-            button1 = new Button();
+            btnIniciarSesion = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -96,16 +96,17 @@
             txtContrasena.Size = new Size(250, 23);
             txtContrasena.TabIndex = 2;
             // 
-            // button1
+            // btnIniciarSesion
             // 
-            button1.BackColor = SystemColors.ControlLight;
-            button1.Font = new Font("Century Gothic", 14.25F);
-            button1.Location = new Point(72, 322);
-            button1.Name = "button1";
-            button1.Size = new Size(188, 35);
-            button1.TabIndex = 3;
-            button1.Text = "Iniciar Sesión";
-            button1.UseVisualStyleBackColor = false;
+            btnIniciarSesion.BackColor = SystemColors.ControlLight;
+            btnIniciarSesion.Font = new Font("Century Gothic", 14.25F);
+            btnIniciarSesion.Location = new Point(72, 322);
+            btnIniciarSesion.Name = "btnIniciarSesion";
+            btnIniciarSesion.Size = new Size(188, 35);
+            btnIniciarSesion.TabIndex = 3;
+            btnIniciarSesion.Text = "Iniciar Sesión";
+            btnIniciarSesion.UseVisualStyleBackColor = false;
+            btnIniciarSesion.Click += btnIniciarSesion_Click;
             // 
             // Form1
             // 
@@ -113,7 +114,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(200, 227, 212);
             ClientSize = new Size(331, 382);
-            Controls.Add(button1);
+            Controls.Add(btnIniciarSesion);
             Controls.Add(label3);
             Controls.Add(txtContrasena);
             Controls.Add(label2);
@@ -139,6 +140,6 @@
         private Label label2;
         private Label label3;
         private TextBox txtContrasena;
-        private Button button1;
+        private Button btnIniciarSesion;
     }
 }

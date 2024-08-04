@@ -16,5 +16,26 @@ namespace Sistema_ventas
         {
             InitializeComponent();
         }
+
+        private void btnRegistrarProducto_Click(object sender, EventArgs e)
+        {
+            Productos productos = new Productos();
+            productos.Show();
+            this.Hide();
+        }
+
+        private void btnRealizarCompra_Click(object sender, EventArgs e)
+        {
+            Compras compras = new Compras();
+            compras.Show();
+            this.Hide();
+        }
+
+        private void linkLblCerrarSesion_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Form1 form = new Form1();
+            form.Show();
+            this.Hide();
+        }
     }
 }
