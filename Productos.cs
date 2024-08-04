@@ -1,20 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Configuration;
 using System.Windows.Forms;
 
 namespace Sistema_ventas
 {
     public partial class Productos : Form
     {
+        private DataAccess dataAccess;
         public Productos()
         {
             InitializeComponent();
+            string conexion = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
+            dataAccess = new DataAccess(conexion);
         }
 
         private void linkLblCerrarSesion_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -41,13 +38,25 @@ namespace Sistema_ventas
             else
             {
                 // Guardar productos
+                string nombreProducto = txtNombreProducto.Text;
+                int precioProducto = Convert.ToInt32(txtPrecioProducto.Text);
+
+                try
+                {
+                    dataAccess.InsertProducto(nombreProducto, precioProducto);
+                    MessageBox.Show("Se ha guardado el producto");
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show($"Error: {ex.Message}");
+                }
 
                 // Limpiar campos
-                foreach (Control c in this.Controls)
+                foreach (Control txtItem in this.Controls)
                 {
-                    if (c is TextBox)
+                    if (txtItem is TextBox)
                     {
-                        c.Text = "";
+                        txtItem.Text = "";
                     }
                 }
             }

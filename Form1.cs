@@ -28,7 +28,7 @@ namespace Sistema_ventas
                 string json = JsonConvert.SerializeObject(_data.ToArray());
 
                 // Escribiendo el archivo Json
-                System.IO.File.AppendAllText(@"..\..\assets\docs\01_RegistroSesion.json", json);
+                System.IO.File.AppendAllText(@"..\..\..\assets\docs\01_RegistroSesion.json", json);
 
                 // Mensaje de inicio de sesión
                 MessageBox.Show("Inicio de sesión exitoso");

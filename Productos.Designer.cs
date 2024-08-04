@@ -106,7 +106,6 @@
             txtPrecioProducto.Location = new Point(40, 252);
             txtPrecioProducto.MaxLength = 3000;
             txtPrecioProducto.Name = "txtPrecioProducto";
-            txtPrecioProducto.PasswordChar = '*';
             txtPrecioProducto.Size = new Size(250, 23);
             txtPrecioProducto.TabIndex = 2;
             // 
