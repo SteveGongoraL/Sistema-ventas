@@ -108,6 +108,7 @@
             txtPrecioProducto.Name = "txtPrecioProducto";
             txtPrecioProducto.Size = new Size(250, 23);
             txtPrecioProducto.TabIndex = 2;
+            txtPrecioProducto.KeyPress += txtPrecioProducto_KeyPress;
             // 
             // label2
             // 

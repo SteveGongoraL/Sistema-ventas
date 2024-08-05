@@ -34,7 +34,7 @@ namespace Sistema_ventas
             DataTable dataTable = new DataTable();
             using (MySqlConnection conexionBD = new MySqlConnection(connectionString))
             {
-                string consulta = "SELECT id_producto, nombre_producto FROM inventarioProducto;";
+                string consulta = "SELECT id_producto, nombre_producto, precio_producto FROM inventarioProducto;";
                 try
                 {
                     conexionBD.Open();

@@ -28,13 +28,14 @@ namespace Sistema_ventas
                 string json = JsonConvert.SerializeObject(_data.ToArray());
 
                 // Escribiendo el archivo Json
-                System.IO.File.AppendAllText(@"..\..\..\assets\docs\01_RegistroSesion.json", json);
+                System.IO.File.AppendAllText(@"..\..\..\assets\docs\RegistroSesion.json", json);
 
                 // Mensaje de inicio de sesión
                 MessageBox.Show("Inicio de sesión exitoso");
 
                 // Cambiar a nueva ventana
-                if (txtUsuario.Text == "ADMI")
+                string usuario = txtUsuario.Text;
+                if (usuario == "ADMI")
                 {
                     Menu menu = new Menu();
                     menu.Show();
@@ -42,7 +43,7 @@ namespace Sistema_ventas
                 }
                 else
                 {
-                    Compras compras = new Compras();
+                    Compras compras = new Compras(usuario);
                     compras.Show();
                     this.Hide();
                 }

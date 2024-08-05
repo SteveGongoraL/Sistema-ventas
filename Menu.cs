@@ -26,7 +26,7 @@ namespace Sistema_ventas
 
         private void btnRealizarCompra_Click(object sender, EventArgs e)
         {
-            Compras compras = new Compras();
+            Compras compras = new Compras("ADMI");
             compras.Show();
             this.Hide();
         }

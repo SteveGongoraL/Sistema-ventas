@@ -28,10 +28,19 @@ namespace Sistema_ventas
             this.Hide();
         }
 
+        // Validar que solo acepte numeros
+        private void txtPrecioProducto_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
         private void btnRealizarCompra_Click(object sender, EventArgs e)
         {
             // Validar campos
-            if(txtNombreProducto.Text == string.Empty || txtPrecioProducto.Text == string.Empty)
+            if (txtNombreProducto.Text == string.Empty || txtPrecioProducto.Text == string.Empty)
             {
                 MessageBox.Show("Es necesario llenar ambos campos");
             }
@@ -46,7 +55,7 @@ namespace Sistema_ventas
                     dataAccess.InsertProducto(nombreProducto, precioProducto);
                     MessageBox.Show("Se ha guardado el producto");
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
                     MessageBox.Show($"Error: {ex.Message}");
                 }
