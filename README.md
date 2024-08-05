@@ -1,6 +1,7 @@
 ## Requisitos Previos 🔍
-- Docker.
-- Visual Studio.
+- [Docker Desktop](https://www.docker.com/products/docker-desktop/)
+- [Docker MySQL](https://hub.docker.com/_/mysql)
+- [Visual Studio](https://visualstudio.microsoft.com/es/downloads/)
 
 ## Pasos para tener Docker - MySql ✨
 ### 1. Descargar MySQL para Docker
